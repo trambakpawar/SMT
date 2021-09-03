@@ -28,7 +28,6 @@ export class multistatus {
 
     addstatus(status, env) {
         cy.get(name).select(data.name)
-        cy.get(date).clear().type(data.date)
         cy.get(jirano).clear().type(data.jirano)
         cy.get(desc).type(data.desc)
         cy.get(statusselect).select(status)

@@ -28,7 +28,6 @@ export class user {
 
     addstatus() {
         cy.get(name).select(data.name)
-        cy.get(date).clear().type(data.date)
         cy.get(jirano).clear().type(data.jirano)
         cy.get(desc).type(data.desc)
         cy.get(status).select(data.status)
