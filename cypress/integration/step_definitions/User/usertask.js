@@ -1,6 +1,6 @@
-import { user } from "../pageObjects/usertask"
+import { user } from "../../pageObjects/User/usertask"
 
-const data = require("../../fixtures/data.json")
+const data = require("../../../fixtures/data.json")
 const st = new user()
 Given(/^I login into system$/, function () {
     st.visit()
