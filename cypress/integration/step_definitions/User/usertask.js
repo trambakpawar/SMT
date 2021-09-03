@@ -34,3 +34,4 @@ Then(/^Username get updated in system$/, function () {
     cy.log("User updated")
     cy.screenshot()
 });
+
