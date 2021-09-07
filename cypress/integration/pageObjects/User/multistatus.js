@@ -37,4 +37,29 @@ export class multistatus {
         cy.get(submit).click({ force: true })
 
     }
+
+    deletestatus(status, env) {
+
+        cy.get(menu).click({ force: true })
+        cy.get(searchstatus).click()
+        cy.get(searchname).select(data.name)
+        cy.get(searchsubmit).click()
+        cy.wait(1000)
+        if (cy.get("body > div.container > div.jumbotron > div:nth-child(2) > div").contains(data.name)) {
+            if (cy.get("body > div.container > div.jumbotron > div:nth-child(2) > div").contains(status)) {
+                cy.get(deletebutton).click()
+            }
+        }
+        else {
+            cy.log("User not found")
+        }
+    }
+
+    searchuser() {
+        cy.get(menu).click({ force: true })
+        cy.get(searchstatus).click()
+        cy.get(searchname).select(data.name)
+        cy.get(searchsubmit).click()
+        cy.wait(1000)
+    }
 }
