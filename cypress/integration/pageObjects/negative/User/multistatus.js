@@ -23,7 +23,7 @@ const data = require("../../../../fixtures/negativedata.json")
 export class multistatus {
 
     visit() {
-        cy.visit(data.baseurl)
+        cy.visit(data.baseurl)    
     }
 
     addstatus(status, env) {

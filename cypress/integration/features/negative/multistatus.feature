@@ -1,4 +1,4 @@
-Feature: Check the status page with negative data
+Feature: Check the status page with negative data     
 
 Scenario Outline: Add the users daily task
   Given I login into system
@@ -13,4 +13,5 @@ Examples:
  | UAT | UAT Testing |
  | Done | UAT Testing |
  | Analysis | UAT Testing |
+
 

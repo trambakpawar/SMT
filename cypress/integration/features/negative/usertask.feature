@@ -16,3 +16,7 @@ Scenario: Delete the users daily task
   When I search the user and delete it
   Then Username get deleted from system
 
+
+
+
+

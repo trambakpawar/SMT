@@ -1,6 +1,6 @@
 import { user } from "../../../pageObjects/negative/User/usertask"
 
-const data = require("../../../../fixtures/negativedata.json")
+const data = require("../../../../fixtures/negativedata.json")    
 const st = new user()
 Given(/^I login into system$/, function () {
     st.visit()

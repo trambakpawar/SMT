@@ -19,7 +19,7 @@ const deletebutton = "body > div.container > div.jumbotron > div:nth-child(2) > 
 // update status
 const updatebutton = "body > div.container > div.jumbotron > div:nth-child(2) > div > table:nth-child(5) > tbody > tr > td:nth-child(2) > a"
 
-const data = require("../../../../fixtures/negativedata.json")
+const data = require("../../../../fixtures/negativedata.json")    
 export class user {
 
     visit() {
