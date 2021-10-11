@@ -3,7 +3,7 @@ import { user } from "../../pageObjects/User/usertask"
 const data = require("../../../fixtures/data.json")
 const st = new user()
 Given(/^I login into system$/, function () {
-cy.viewport(1024,1366)
+    cy.viewport(1024, 1366)
     st.visit()
 });
 
