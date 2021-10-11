@@ -11,7 +11,7 @@
   "author": "Trambak Pawar",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^8.3.1",
+    "cypress": "^8.5.0",
     "cypress-cucumber-preprocessor": "^4.2.0",
     "multiple-cucumber-html-reporter": "^1.18.0"
   },
@@ -21,5 +21,8 @@
     },
     "nonGlobalStepDefinitions": false,
     "step_definitions": "./cypress/integration/step_definitions/"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0"
   }
 }
