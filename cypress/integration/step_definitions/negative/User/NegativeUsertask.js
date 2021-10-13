@@ -1,4 +1,4 @@
-import { user } from "../../../pageObjects/negative/User/usertask"
+import { user } from "../../../pageObjects/negative/User/NegatibeUsertask"
 
 const data = require("../../../../fixtures/negativedata.json")
 const st = new user()
@@ -13,7 +13,7 @@ When(/^I assign the task to system$/, function () {
 Then(/^Username get displayed in system$/, function () {
     cy.get('body > div.container > div.jumbotron > div:nth-child(2) > div > div').contains(data.name).should("be.visible")
     cy.screenshot()
-}); 
+});
 
 // delete user status
 When(/^I search the user and delete it$/, function () {

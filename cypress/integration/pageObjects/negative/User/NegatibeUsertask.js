@@ -1,7 +1,5 @@
 /// <reference types="Cypress" />
 
-import cypress from "cypress"
-
 // Add user task
 const name = "#user_id"
 const date = "#date"
@@ -22,11 +20,10 @@ const deletebutton = "body > div.container > div.jumbotron > div:nth-child(2) > 
 const updatebutton = "body > div.container > div.jumbotron > div:nth-child(2) > div > table:nth-child(5) > tbody > tr > td:nth-child(2) > a"
 
 const data = require("../../../../fixtures/negativedata.json")
-require('dotenv').config()
 export class user {
 
     visit() {
-        cy.visit(Cypress.env('baseurl'))
+        cy.visit(data.baseurl)
     }
 
     addstatus() {
