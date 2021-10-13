@@ -10,7 +10,7 @@ When(/^I assign the task to system$/, function () {
     st.addstatus()
 });
 
-Then(/^Username get displayed in system$/, function () {
+Then(/^Username get displayed in system with negative data$/, function () {
     cy.get('body > div.container > div.jumbotron > div:nth-child(2) > div > div').contains(data.name).should("be.visible")
     cy.screenshot()
 });
@@ -20,7 +20,7 @@ When(/^I search the user and delete it$/, function () {
     st.deletestatus()
 });
 
-Then(/^Username get deleted from system$/, function () {
+Then(/^Username get deleted from system with negative data$/, function () {
     cy.log("User deleted")
     cy.screenshot()
 });
@@ -30,7 +30,7 @@ When(/^I search the user and update it$/, function () {
     st.updatestatus()
 });
 
-Then(/^Username get updated in system$/, function () {
+Then(/^Username get updated in system with negative data$/, function () {
     cy.log("User updated")
     cy.screenshot()
 });

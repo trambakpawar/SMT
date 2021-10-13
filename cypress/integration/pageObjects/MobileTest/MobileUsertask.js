@@ -26,6 +26,8 @@ export class user {
 
     visit() {
         cy.visit(data.baseurl)
+        cy.log("Visiting to Website")
+        cy.title().should("eq", "Dev")
     }
 
     addstatus() {

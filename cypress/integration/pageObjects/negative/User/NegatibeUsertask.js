@@ -24,6 +24,7 @@ export class user {
 
     visit() {
         cy.visit(data.baseurl)
+        cy.title().should("eq", "Dev")
     }
 
     addstatus() {

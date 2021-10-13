@@ -24,6 +24,7 @@ export class multistatus {
 
     visit() {
         cy.visit(data.baseurl)
+        cy.title().should("eq", "Dev")
     }
 
     addstatus(status, env) {
