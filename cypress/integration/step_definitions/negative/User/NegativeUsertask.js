@@ -6,7 +6,7 @@ Given(/^I login into system$/, function () {
     st.visit()
 });
 
-When(/^I assign the task to system$/, function () {
+When(/^I assign the task to with negative data$/, function () {
     st.addstatus()
 });
 
@@ -16,7 +16,7 @@ Then(/^Username get displayed in system with negative data$/, function () {
 });
 
 // delete user status
-When(/^I search the user and delete it$/, function () {
+When(/^I search the user and delete it with negative data$/, function () {
     st.deletestatus()
 });
 
@@ -26,7 +26,7 @@ Then(/^Username get deleted from system with negative data$/, function () {
 });
 
 // Update user status
-When(/^I search the user and update it$/, function () {
+When(/^I search the user and update it with negative data$/, function () {
     st.updatestatus()
 });
 

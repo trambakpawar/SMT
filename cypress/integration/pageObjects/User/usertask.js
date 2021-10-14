@@ -28,7 +28,7 @@ export class user {
     }
 
     addstatus() {
-        cy.get(name).select(data.name)
+        cy.get(name).select(data.name).should("be.visible")
         cy.get(jirano).clear().type(data.jirano)
         cy.get(desc).type(data.desc)
         cy.get(status).select(data.status)
@@ -48,8 +48,10 @@ export class user {
         cy.wait(1000)
         if (cy.get("body > div.container > div.jumbotron > div:nth-child(2) > div").contains(data.name)) {
             cy.get(deletebutton).click()
+
         }
         else {
+
             cy.log("User not found")
         }
     }
@@ -66,6 +68,7 @@ export class user {
             cy.get(submit).click()
         }
         else {
+            cy.get("body > div.container > div.jumbotron > div:nth-child(2) > div").contains(data.name).should("not.exist")
             cy.log("User not found")
         }
     }
