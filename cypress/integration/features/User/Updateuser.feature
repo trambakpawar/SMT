@@ -1,6 +1,6 @@
 Feature: Update user details
 
-Scenario: Update the user Jira Ticket
+  Scenario: Update the user Jira Ticket
     Given User is login into system and daily status is created
     When I update the user jira no
     Then Jira no should get updated
