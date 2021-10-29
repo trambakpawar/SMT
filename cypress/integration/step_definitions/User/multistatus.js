@@ -2,6 +2,7 @@ import { multistatus } from "../../pageObjects/User/multistatus"
 
 const data = require("../../../fixtures/data.json")
 const ms = new multistatus()
+const deletebutton = "body > div.container > div.jumbotron > div:nth-child(2) > div > table:nth-child(5) > tbody > tr > td:nth-child(3) > a"
 
 Given('I login into system', function () {
     ms.visit()
@@ -16,15 +17,12 @@ Then('Username with {string} and {string} get displayed in system', function (st
     cy.get('body > div.container > div.jumbotron > div:nth-child(2) > div > div').contains(status).should("be.visible")
     //cy.get('body > div.container > div.jumbotron > div:nth-child(2) > div > div').contains(env).should("be.visible")
     cy.screenshot()
-});
-
-When('I search the user with {string} and {string} combo and delete it', function (status, env) {
-    ms.deletestatus(status, env)
-});
-
-Then('Username with {string} and {string} get deleted from system', function (status, env) {
     ms.searchuser()
+    cy.get('body > div.container > div.jumbotron > div:nth-child(2) >').contains(data.name).should("be.visible")
+    cy.get(deletebutton).click()
     cy.get('.panel-body').contains(status).should("not.exist")
     cy.get('.panel-body').contains(env).should("not.exist")
-    cy.screenshot()
+    cy.log("User Status Deleted")
 });
+
+

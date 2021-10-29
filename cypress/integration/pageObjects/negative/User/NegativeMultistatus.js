@@ -38,4 +38,11 @@ export class multistatus {
         cy.get(submit).click({ force: true })
 
     }
+    searchuser() {
+        cy.get(menu).click({ force: true })
+        cy.get(searchstatus).click()
+        cy.get(searchname).select(data.name)
+        cy.get(searchsubmit).click()
+        cy.wait(1000)
+    }
 }

@@ -69,4 +69,5 @@ export class user {
             cy.log("User not found")
         }
     }
+
 }

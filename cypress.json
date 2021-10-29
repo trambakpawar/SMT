@@ -3,13 +3,16 @@
     "requestTimeout": 60000,
     "pageLoadTimeout": 120000,
     "testFiles": "**/**.feature",
+    "screenshotOnRunFailure": true,
     "reporter": "mochawesome",
     "reporterOptions": {
         "charts": true,
         "overwrite": false,
         "html": false,
         "json": true,
-        "reportDir": "cypress/report/mochawesome-report"
+        "reportDir": "cypress/report/mochawesome-report",
+        "embeddedScreenshots": true,
+        "screenshotsFolder": "cypress/reports/mochareports/assets"
     },
     "video": false
 }
