@@ -76,11 +76,15 @@ Then(/^comment should get updated$/, function () {
 
 //Update the user date
 When(/^I update the user date$/, function () {
-
+cy.log("User updated the date")
 });
 
 Then(/^Date should get updated$/, function () {
-
+    up.search()
+    cy.get('body > div.container > div.jumbotron > div:nth-child(2) >').contains(data.name).should("be.visible")
+    cy.screenshot()
+    cy.get(deletebutton).click()
+    cy.log("User Status Deleted")
 });
 
 

@@ -6,7 +6,7 @@ Given(/^I login into system$/, function () {
     st.visit()
 });
 
-When(/^I search the user and update it with negative data$/, function () {
+When(/^I assign the task to system with negative data$/, function () {
     st.addstatus()
 });
 
