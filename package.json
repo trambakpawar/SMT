@@ -9,7 +9,9 @@
     "cypress:open": "cypress open",
     "merge": "mochawesome-merge cypress/report/mochawesome-report/*.json > cypress/report/output.json",
     "generate-report": "marge cypress/report/output.json --reportDir ./ --inline",
-    "mainreport": "npm run pretest && npm run merge && npm run generate-report"
+    "mainreport": "npm run pretest && npm run merge && npm run generate-report",
+    "test": "node_modules\\.bin\\cypress run",
+    "runtest": "npm run test --"
   },
   "author": "Trambak Pawar",
   "license": "ISC",
