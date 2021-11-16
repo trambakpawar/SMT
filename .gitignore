@@ -6,3 +6,6 @@ cypress/videos
 cypress/cucumber-json
 cypress/downloads
 cypress.env.json
+lambdatest-config.json
+project.zip
+test.zip
