@@ -8,7 +8,6 @@ Given(/^I login into system from mobile$/, function () {
 });
 
 When(/^I assign the task to system from mobile$/, function () {
-
     st.addstatus()
 });
 
